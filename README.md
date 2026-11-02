@@ -1,25 +1,35 @@
-# PokeHub — downloads oficiais
+# PokeHub — instaladores oficiais para Windows
 
-Repositório **público dedicado à distribuição** dos instaladores do PokeHub para Windows. O código-fonte, o histórico de desenvolvimento e a automação de compilação permanecem em um repositório separado **privado**.
+Este repositório **público** é dedicado à distribuição dos instaladores do **PokeHub**, um gerenciador de múltiplas contas para Windows. O **código-fonte, o histórico de desenvolvimento e a documentação técnica permanecem em um repositório privado**.
 
-## Baixar
+## Download
 
-**Ainda não há um lançamento publicado.** Assim que a primeira versão for validada, o instalador estará em:
+**Última versão documentada: v0.5.7 (02/11/2026).**
 
-[Ver versões e instaladores do PokeHub](https://github.com/lucasgrayeb1/PokeHub-Releases/releases/latest)
+[**Baixar a versão mais recente do PokeHub**](https://github.com/lucasgrayeb1/PokeHub-Releases/releases/latest)
 
-Cada versão publicada poderá incluir:
+Em cada lançamento, verifique:
 
-- `PokeHub-Setup-vX.Y.Z.exe` — instalador Windows x64;
-- `SHA256SUMS.txt` — verificação de integridade;
-- Notas de versão.
+- `PokeHub-Setup-vX.Y.Z.exe`: instalador para Windows x64;
+- `SHA256SUMS.txt`: hash SHA-256 do instalador para conferir integridade.
 
-## Como atualizar
+O PokeHub utiliza **.NET 8 / WPF / Microsoft Edge WebView2**. É destinado a **Windows**; não há distribuição nativa para Android, iOS, macOS ou Linux.
 
-A partir da primeira versão com atualizador integrado, o aplicativo poderá consultar este repositório público e, após confirmação do usuário, baixar e instalar uma nova versão. O aplicativo valida o SHA-256 do instalador antes de executá-lo.
+## Instalação e atualização
 
-## Segurança e privacidade
+1. Baixe e execute o instalador oficial a partir da página de Releases.
+2. Instale normalmente no Windows. Quando uma versão nova for publicada, use o botão **Atualizações** no próprio PokeHub.
+3. O aplicativo consulta versões públicas, verifica o tamanho e o SHA-256 do instalador e solicita confirmação antes de iniciá-lo.
+4. **Não desinstale a versão anterior para atualizar**: a instalação por cima preserva a pasta local de sessões, desde que você não a apague.
 
-Este repositório **não contém** código-fonte, cookies, tokens, sessões, credenciais ou perfis de navegação. Os perfis permanecem locais a cada usuário Windows. Os instaladores são binários compilados (podem ser inspecionados por ferramentas de análise). Verifique a procedência do download; instaladores ainda não assinados digitalmente podem acionar avisos do Windows.
+## Privacidade e segurança
 
-O PokeHub é um projeto independente, sem afiliação com os jogos acessados pela aplicação.
+- Este repositório **não armazena** senhas de usuários, cookies, perfis, dados de sessão ou tokens do aplicativo.
+- As contas e seus dados ficam no computador do usuário, em `%LOCALAPPDATA%\PokeHubWebView2Lab`, separados da pasta de instalação.
+- Quando usadas, as credenciais cadastradas individualmente na versão 0.5.7 ficam protegidas pela criptografia DPAPI do usuário atual do Windows; não são sincronizadas com este repositório.
+- O SHA-256 verifica integridade, mas **não equivale a uma assinatura digital**. Instaladores não assinados podem apresentar avisos do Windows SmartScreen.
+- Como todo software distribuído como binário, os instaladores podem ser inspecionados por ferramentas de análise. O repositório de distribuição não publica código-fonte.
+
+## Aviso
+
+PokeHub é um projeto independente, **sem afiliação** com PokeIdle.io ou Poke Idle World.
